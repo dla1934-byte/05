@@ -3,29 +3,27 @@
 
 int main(int argc, char *argv[])
 {
-    int a, b;
-    char op;
-    int result;
+    int answer = 59;
+    int num;
+    int trial=0;
     
-
-    printf("Enter the calculation :");
-    scanf("%i %c %i", &a, &op, &b);
-    
-    //printf("%i %c %i", $a, $op, &b);
-    
-    if (op == '+')
-        result = a+b;
-    else if (op == '-')
-        result = a-b;
-    else if (op == '*')
-        result = a*b;
-    else if (op == '/')
-        result = a/b;
+    do
+    {
+        printf("Input a number:");
+        scanf("%d", &num);
         
-    
-    printf("= %i\n",result);
- 
+        if (answer < num)
+           printf("high!\n");
+        else if (answer > num)
+           printf("low!\n");
+           
+        trial++;
+     }
+     while(answer != num);
+     
+     printf("congratulation! trial:%i\n",trial);
 
+ 
   
   system("PAUSE");	
   return 0;
